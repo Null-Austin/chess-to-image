@@ -1,0 +1,60 @@
+<html>
+    <style>
+        p{
+            color: ghostwhite;
+        }
+        span{
+            color: ghostwhite;
+        }
+        hr{
+            height:2px;border-width:0;background-color:black
+        }
+        .brother{
+            display: inline-block;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .underline{
+            text-decoration: underline;
+            font-size: ;
+        }
+        .gavel{
+            width: 50%;
+            height: 50%;
+        }
+  
+    </style>
+    <body style="background-color: rgb(37, 37, 37);">
+        <div style="background-color: rgb(43, 43, 43);">
+            <img id="profilepic" src="{{{img}}}">
+            <div class="brother" id="about">
+                <span style="font-size: 45px;">{{{username}}}</span>
+                <span id="ifmod" style="color:red;"><b>MOD</b></span>
+                <span></span>
+                <script>if ({{{ISMOD}}}==false){document.getElementById('ifmod').remove()}</script>
+
+                <div>
+                    <span style="padding-right: 20px;padding-left: 20px;">{{{date}}}</span>
+                    <span style="padding-right: 20px;padding-left: 20px;">{{{country}}}</span>
+                </div>
+            </div>
+            <hr>
+            <div class="brother" style="padding-top: 20px;">
+                <span class="underline" style="font-size: 45px;">{{{score}}}</span>
+                <span>Rapid Rating</span>
+            </div>
+            <div class="brother">
+                <span style="font-size: 45px;" class="underline">{{{winrate}}}</span><span> Win rate.</span>
+            </div>
+            <div class="brother">
+                <span style="font-size: 45px;" class="underline">{{{rank}}}</span><span> Title</span>
+            </div>
+        </div>
+    </body>
+    <script>
+        pfp = document.getElementById('profilepic')
+        about = document.getElementById('about')
+        pfp.width = about.offsetHeight
+        pfp.height = pfp.width
+    </script>
+</html>
