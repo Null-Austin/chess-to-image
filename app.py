@@ -19,5 +19,9 @@ def get_html():
     user = request.args.get('user')
     return(gethtml(user))
 
+@app.route('/')
+def index():
+    return(open('index.html').read())
+
 if __name__ == '__main__':
     app.run(debug=True)
