@@ -3,3 +3,7 @@ Hello, this is a tool to convert your chess.com profile into a image, (or html f
 pip install flask requests imgkit
 ```
 also imgkit needs something, im too lazy to provide a link. so yeah, idk whats its called also. i already spent all my time on this.
+```url's:
+/image?user=[username]
+/html?user=[username]
+```
