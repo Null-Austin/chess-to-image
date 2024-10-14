@@ -32,11 +32,10 @@ def country(data): #data1
     return(data['countryName'])
 
 def ismod(data): #data1
-    flair = data['flair']['name']
-    if flair == 'Staff Pawn':
-        return('true')
+    if data['membership']['level'] >= 80:
+        return(1)
     else:
-        return("'" + "false" + "'")
+        return(0)
 
 def getleague(data):#data2
     divison = data['division']

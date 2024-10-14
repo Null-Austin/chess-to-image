@@ -13,5 +13,5 @@ def gethtml(username):
     html = html.replace('{{{img}}}',stats[2])
     return(html)
 def takescreenshot(username):
-    imgkit.from_string(gethtml(username), 'users/USER' + username + '.png', options={'width': '800', 'height': '200'})
+    imgkit.from_string(gethtml(username), 'users/USER' + username + '.png', options={'width': '1000', 'height': '225'})
 takescreenshot('BaronAustin')
