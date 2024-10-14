@@ -32,7 +32,11 @@ def country(data): #data1
     return(data['countryName'])
 
 def ismod(data): #data1
-    return(data['isModerator'])
+    flair = data['flair']['name']
+    if flair == 'Staff Pawn':
+        return('true')
+    else:
+        return("'" + "false" + "'")
 
 def getleague(data):#data2
     divison = data['division']
@@ -50,4 +54,5 @@ def getall(username):
     country_code = country(alldata[1]) #4
     ismod_ = ismod(alldata[1]) #5
     league = getleague(alldata[2]) #6
+    print(ismod_)
     return([rapidrating_count,winrate_count,avatar,joindate_count,country_code,ismod_,league])
